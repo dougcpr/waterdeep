@@ -1,0 +1,66 @@
+<div class="example-container">
+  <div
+    cdkDropList
+    #encounterList="cdkDropList"
+    [cdkDropListData]="encounter"
+    [cdkDropListConnectedTo]="[playerList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box {{item.type}}"
+         *ngFor="let item of encounter" cdkDrag>
+      <span class="player-stats">
+        <div>
+          {{item.name}}
+          <img class="class-icon" *ngFor="let icon of item.class" src="../../../assets/icons/{{icon}}.png" alt="">
+        </div>
+        <div *ngIf="item.armor">
+          <img class="shield-icon" src="../../../assets/icons/shield.png">
+          <span class="shield-number">{{item.armor}}</span>
+        </div>
+      </span>
+      <div *ngIf="item.perception">
+        <img class="perception" src="../../../assets/icons/perception.png" alt="">
+        <span
+          [ngStyle]="{left: (item.perception > 9) ? '16px' : '20px'}"
+          class="perception-value">{{item.perception}}</span>
+      </div>
+      <div class="health-tracker">
+        <mat-icon (click)="subtract(item)" class="minus">remove</mat-icon>
+        <span class="player-count">{{item.count}}</span>
+        <mat-icon (click)="add(item)" class="add">add</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div
+    cdkDropList
+    #playerList="cdkDropList"
+    [cdkDropListData]="listOfPlayers"
+    [cdkDropListConnectedTo]="[encounterList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box {{player.type}}"
+         *ngFor="let player of listOfPlayers" cdkDrag>
+      <span class="player-stats">
+        <div>
+          {{player.name}}
+          <img class="class-icon" *ngFor="let icon of player.class" src="../../../assets/icons/{{icon}}.png" alt="">
+        </div>
+        <div *ngIf="player.armor">
+          <img class="shield-icon" src="../../../assets/icons/shield.png">
+          <span class="shield-number">{{player.armor}}</span>
+        </div>
+      </span>
+      <div *ngIf="player.perception">
+        <img class="perception" src="../../../assets/icons/perception.png" alt="">
+        <span
+          [ngStyle]="{left: (player.perception > 9) ? '16px' : '20px'}"
+          class="perception-value">{{player.perception}}</span>
+      </div>
+      <div class="health-tracker">
+        <mat-icon (click)="subtract(player)" class="minus">remove</mat-icon>
+        <span class="player-count">{{player.count}}</span>
+        <mat-icon (click)="add(player)" class="add">add</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

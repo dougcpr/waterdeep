@@ -1,0 +1,135 @@
+.example-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  vertical-align: top;
+}
+
+.example-list {
+  width: 400px;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  display: block;
+}
+
+.example-box {
+  margin: 0 auto;
+  padding: 0 14px;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
+
+.health-tracker {
+  width: 70px;
+  font-family: monospace;
+  display: flex;
+  justify-content: flex-end;
+  .mat-icon{
+    height: 15px;
+    width: 15px;
+    font-size: 15px;
+  }
+  :hover {
+    cursor: pointer;
+  }
+  .minus:active {
+    cursor: pointer;
+  }
+  .add:active {
+    cursor: pointer;
+  }
+  span {
+    position: relative;
+    padding: 0 5px;
+    top: -2px;
+  }
+}
+
+.player {
+  background-color: #C8E6C9;
+}
+.monster {
+  background-color: lightcoral;
+}
+.trap {
+  background-color: #FFD180;
+}
+.npc {
+  background-color: lightgoldenrodyellow;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.player-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+}
+
+.tab {
+  background-color: #0277BD;
+  height: 1px;
+  width: 1px;
+  padding: 20px 10px;
+}
+
+.shield-icon {
+  height: 32px;
+  position: relative;
+}
+.shield-number {
+  font-family: monospace;
+  color: white;
+  position: relative;
+  bottom: 12px;
+  font-size: 13px;
+  left: -24px;
+}
+
+.perception {
+  margin-right: 8px;
+  position: relative;
+  top: 13px;
+  width: 50px;
+  height: 50px;
+}
+
+.perception-value {
+  font-family: monospace;
+  z-index: 3;
+  position: relative;
+  top: -27px;
+}

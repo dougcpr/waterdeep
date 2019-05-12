@@ -1,0 +1,33 @@
+.player-fab {
+  z-index: 5;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  .fab-icon {
+    font-size: 17px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.roster {
+  background-color: white;
+  z-index: 5;
+  animation: fade 0.3s linear;
+  border-radius: .4em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: fixed;
+  bottom: 10px;
+  width: 150px;
+  right: 70px;
+  padding: 0 24px 24px;
+  .player-activity-toggle {
+    padding-top: 5px;
+    height: 22px;
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

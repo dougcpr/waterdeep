@@ -1,0 +1,40 @@
+.accordion-container {
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+}
+
+mat-expansion-panel {
+  background-color: lightsteelblue;
+}
+
+.split-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-mission {
+  padding-top: 10px;
+  cursor: pointer;
+  color: #0277BD;
+}
+
+.delete-mission {
+  cursor: pointer;
+  color: lightcoral;
+}
+
+.sidestory-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sidestory-input-field {
+  width: 80%;
+}
+
+.list-item {
+  padding-top: 10px;
+  height: 45px;
+}

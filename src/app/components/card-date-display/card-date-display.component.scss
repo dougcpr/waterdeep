@@ -1,0 +1,45 @@
+.card-container {
+  margin: 10px;
+  width: 90px;
+  height: 90px;
+  font-size: 0.8rem;
+  background-color: white;
+  border: 1px solid black;
+  outline: none;
+}
+
+.date-value {
+  width: 80%;
+  color: rgba(0, 0, 0, 0.54);
+  position: relative;
+  top: 30%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.date-text {
+  position: relative;
+  color: rgba(0,0,0,.54);
+  top: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.start {
+  color: goldenrod;
+}
+
+.campaign {
+  color: #517cbd
+}
+
+.sidestory {
+  color: #50bc91;
+}
+
+.today {
+  color: lightcoral;
+}
+
+.future {
+  color: mediumpurple;
+}

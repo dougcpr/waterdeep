@@ -1,0 +1,21 @@
+.calendar-fab {
+  background-color: #0277BD;
+  z-index: 5;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  .fab-icon {
+    font-size: 17px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.bottom-sheet {
+  width: 600px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

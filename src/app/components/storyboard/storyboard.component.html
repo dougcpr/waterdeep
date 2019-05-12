@@ -1,0 +1,77 @@
+<div class="split-container">
+  <div class="accordion-container">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let chapter of storyboard;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ chapter.title }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ chapter.description }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="list-item" role="list" *ngFor="let section of chapter.sections">
+          <mat-checkbox
+            (click)="updateStoryBoard(chapter)"
+            [(ngModel)]="section.checked"
+            [checked]=section.checked>
+            {{section.mission}}
+          </mat-checkbox>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="accordion-container">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let story of factionMissions">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ story.title }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ story.description }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="list-item" role="list" *ngFor="let section of story.sections">
+          <mat-checkbox
+            (click)="updateFactionMission(story)"
+            [(ngModel)]="section.checked"
+            [checked]=section.checked>
+            {{section.mission}}
+          </mat-checkbox>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="accordion-container">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let story of sideStory">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ story.title }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ story.description }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="list-item" role="list" *ngFor="let section of story.sections; let i = index">
+          <div class="sidestory-field">
+            <mat-checkbox
+              (click)="updateSideStory(story)"
+              [(ngModel)]="section.checked"
+              [checked]=section.checked>
+              {{section.mission}}
+            </mat-checkbox>
+            <mat-icon matRipple class="delete-mission" (click)="removeStory(story, i)">delete</mat-icon>
+          </div>
+        </div>
+        <div class="sidestory-field">
+          <mat-form-field class="sidestory-input-field">
+            <input [(ngModel)]="newSideStory" placeholder="Add Side Story" matInput>
+          </mat-form-field>
+          <mat-icon matRipple class="add-mission" (click)="addStory(newSideStory, story)">add</mat-icon>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
