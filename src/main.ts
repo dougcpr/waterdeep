@@ -8,5 +8,14 @@ if (environment.production) {
   enableProdMode();
 }
 
+// Note: loader import location set using "esmLoaderPath" within the output target confg
+import { defineCustomElements } from 'monomer/loader';
+
+if (environment.production) {
+  enableProdMode();
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+defineCustomElements(window);

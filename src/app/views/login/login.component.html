@@ -1,4 +1,8 @@
-<p>
-  login works!
-</p>
-<button (click)="login()" routerLink="/dashboard"></button>
+<app-center-layout>
+  <dwc-card subject="Log In">
+    <dwc-input label="Username"></dwc-input>
+    <dwc-input label="Password" type="password" ></dwc-input>
+    <dwc-button block (click)="login()" routerLink="/dashboard">Login</dwc-button>
+    <div class="tc">Not a user? Register here.</div>
+  </dwc-card>
+</app-center-layout>

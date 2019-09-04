@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,17 +16,19 @@ import { BottomSheetComponent, CalendarComponent } from './components/calendar/c
 import { CardDateDisplayComponent } from './components/card-date-display/card-date-display.component';
 import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { CenterLayoutComponent } from './layouts/center-layout/center-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DragDropEncounterComponent,
-    StoryboardComponent,
-    CalendarComponent,
     BottomSheetComponent,
+    CalendarComponent,
     CardDateDisplayComponent,
+    CenterLayoutComponent,
+    DashboardComponent,
+    DragDropEncounterComponent,
     LoginComponent,
-    DashboardComponent
+    StoryboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
   ],
   entryComponents: [BottomSheetComponent],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
