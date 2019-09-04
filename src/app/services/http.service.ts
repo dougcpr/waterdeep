@@ -12,6 +12,9 @@ export class HttpService {
   constructor(
     private http: HttpClient
   ) { }
+  loginUser(body): Observable<any> {
+    return this.http.post(`${this.route}/login`, body);
+  }
   getStoryBoard(): Observable<any> {
     return this.http.get(`${this.route}/getStoryBoard`);
   }

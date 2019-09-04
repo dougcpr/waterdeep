@@ -37,6 +37,17 @@ app.get("/getStoryBoard", function(req, res) {
 	});
 });
 
+app.post("/login", function(req, res) {
+  db.collection("users").find({"username": req.body.username}).toArray(function(err, result) {
+    if (err){
+      res.send(err);
+    } else {
+      console.log(result);
+      result.length === 1 ? res.send(result) : res.send(false);
+    }
+  });
+});
+
 app.get("/getSideStory", function(req, res) {
   db.collection("sideStory").find().toArray(function(err, result) {
     if (err){
