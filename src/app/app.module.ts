@@ -14,6 +14,8 @@ import { DragDropEncounterComponent } from './components/drag-drop-encounter/dra
 import { StoryboardComponent } from './components/storyboard/storyboard.component';
 import { BottomSheetComponent, CalendarComponent } from './components/calendar/calendar.component';
 import { CardDateDisplayComponent } from './components/card-date-display/card-date-display.component';
+import { LoginComponent } from './views/login/login.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CardDateDisplayComponent } from './components/card-date-display/card-da
     StoryboardComponent,
     CalendarComponent,
     BottomSheetComponent,
-    CardDateDisplayComponent
+    CardDateDisplayComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

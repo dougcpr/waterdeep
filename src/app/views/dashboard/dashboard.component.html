@@ -1,0 +1,37 @@
+<mat-tab-group>
+  <mat-tab label="Story">
+    <app-storyboard></app-storyboard>
+  </mat-tab>
+  <section *ngFor="let encounter of encounters">
+    <mat-tab
+      *ngIf="encounter.active"
+      label="{{encounter.label}}">
+      <app-drag-drop-encounter
+        [encounter]="encounter.encounters"
+        [players]="players"
+      ></app-drag-drop-encounter>
+    </mat-tab>
+  </section>
+</mat-tab-group>
+<app-calendar></app-calendar>
+<button
+  (click)="showCharacters()"
+  class="player-fab"
+  mat-mini-fab
+  color="primary">
+  <mat-icon class="fab-icon">person</mat-icon>
+</button>
+<div *ngIf="showRoster" class="roster">
+  <div
+    class="player-activity-toggle"
+    *ngFor="let player of roster">
+    <mat-checkbox
+      (click)="updatePlayer(player)"
+      [checked]=player.active
+      [(ngModel)]="player.active">
+      {{player.name}}
+    </mat-checkbox>
+    <img *ngFor="let icon of player.class" class="class-icon" src="../assets/icons/{{icon}}.png" alt="">
+  </div>
+</div>
+<button (click)="logout()" routerLink=""></button>
