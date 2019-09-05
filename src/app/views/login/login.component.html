@@ -3,6 +3,6 @@
     <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" (valueChange)="updateText($event)" label="Username"></dwc-input>
     <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" disabled label="Password"></dwc-input>
     <dwc-button [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" block (click)="login()">Login</dwc-button>
-    <div [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="tc fade">Register your character <span class="hyperlink" (click)="navigateToRegisterPage()">here</span>.</div>
+    <div [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="tc fade">Register your character <span class="hyperlink" (click)="navigateToRegisterPage()">here</span></div>
   </dwc-card>
 </app-center-layout>

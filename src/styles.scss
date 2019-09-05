@@ -50,6 +50,7 @@ dwc-card {
 
 .hyperlink {
   cursor: pointer;
+  text-decoration: underline;
 }
 .hyperlink:hover {
   color: #50bc91;
@@ -61,6 +62,10 @@ dwc-card {
 
 .tc {
   text-align: center;
+}
+
+.te {
+  text-align: end;
 }
 
 @keyframes fade {
