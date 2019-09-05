@@ -10,6 +10,13 @@
   }
 }
 
+.exit-fab {
+  z-index: 5;
+  position: fixed;
+  bottom: 110px;
+  right: 10px;
+}
+
 .roster {
   background-color: white;
   z-index: 5;

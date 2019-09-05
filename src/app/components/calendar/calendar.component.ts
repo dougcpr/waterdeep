@@ -32,7 +32,6 @@ export class BottomSheetComponent implements OnInit {
   ngOnInit(): void {
     this.http.getDates()
       .subscribe((dates) => {
-        console.log(dates);
         this.dates = dates[0].dates;
       });
   }

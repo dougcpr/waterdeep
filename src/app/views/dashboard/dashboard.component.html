@@ -15,6 +15,13 @@
 </mat-tab-group>
 <app-calendar></app-calendar>
 <button
+  routerLink="/"
+  mat-mini-fab
+  class="exit-fab"
+  color="info">
+  <mat-icon class="fab-icon">exit_to_app</mat-icon>
+</button>
+<button
   (click)="showCharacters()"
   class="player-fab"
   mat-mini-fab
@@ -34,5 +41,3 @@
     <img *ngFor="let icon of player.class" class="class-icon" src="../assets/icons/{{icon}}.png" alt="">
   </div>
 </div>
-
-<dwc-button (click)="logout()" routerLink="">Login</dwc-button>
