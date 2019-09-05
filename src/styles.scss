@@ -17,3 +17,69 @@
   height: 25px;
   width: 25px;
 }
+
+dwc-card {
+  dwc-input.slide-right {
+    animation: slide-right 1s forwards;
+  }
+  dwc-button.slide-right {
+    animation: slide-right 1s forwards;
+  }
+  div.slide-right {
+    animation: slide-right 1s forwards;
+  }
+  dwc-input.slide-left {
+    position: relative;
+    left: 300px;
+    animation: slide-left 1s forwards;
+  }
+  dwc-button.slide-left {
+    position: relative;
+    left: 300px;
+    animation: slide-left 1s forwards;
+  }
+  div.slide-left {
+    position: relative;
+    left: 300px;
+    animation: slide-left 1s forwards;
+  }
+  .fade {
+    animation: fade 0.3s forwards;
+  }
+}
+
+.hyperlink {
+  cursor: pointer;
+}
+.hyperlink:hover {
+  color: #50bc91;
+}
+.hyperlink:focus {
+  outline: none;
+  color: black;
+}
+
+.tc {
+  text-align: center;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0px);
+  } to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0px);
+  } to {
+      transform: translateX(-300px);
+    }
+}

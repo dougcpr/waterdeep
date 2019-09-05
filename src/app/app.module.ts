@@ -19,6 +19,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { CenterLayoutComponent } from './layouts/center-layout/center-layout.component';
 import { DmComponent } from './views/dashboard/dm/dm.component';
 import { PlayerComponent } from './views/dashboard/player/player.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PlayerComponent } from './views/dashboard/player/player.component';
     StoryboardComponent,
     DmComponent,
     PlayerComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

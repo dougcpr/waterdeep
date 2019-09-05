@@ -10,6 +10,7 @@ import { User } from '../../models/user.model';
 })
 export class LoginComponent implements OnInit {
   username = '';
+  clicked = false;
   constructor(private _httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
@@ -22,14 +23,18 @@ export class LoginComponent implements OnInit {
       .subscribe((response: User) => {
         if (response) {
           localStorage.setItem('auth', 'true');
-          // TODO: Check against response.role and load different dashboard with player data
-          // TODO: otherwise load dm dashboard
           this.router.navigate([`/dashboard/${response[0].role}`]);
         } else {
           console.log('Username Not Found');
           // show error message D:
         }
       });
+  }
+  navigateToRegisterPage() {
+    this.clicked = !this.clicked;
+    setTimeout(() => {
+      this.router.navigate(['/register']);
+    }, 1000);
   }
 
 }

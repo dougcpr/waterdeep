@@ -1,0 +1,8 @@
+<app-center-layout>
+  <dwc-card subject="">
+    <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" label="Username"></dwc-input>
+    <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" label="Role"></dwc-input>
+    <dwc-button [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" block >Register</dwc-button>
+    <div [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade"><span class="hyperlink" (click)="navigateHome()">Back</span></div>
+  </dwc-card>
+</app-center-layout>
