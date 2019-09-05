@@ -9,8 +9,6 @@ export class CardDateDisplayComponent implements OnInit {
   @Input('date') date;
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.date);
-  }
+  ngOnInit() {}
 
 }

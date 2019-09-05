@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { Router } from '@angular/router';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -18,10 +19,12 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this._httpService.loginUser({username: this.username})
-      .subscribe((response) => {
+      .subscribe((response: User) => {
         if (response) {
           localStorage.setItem('auth', 'true');
-          this.router.navigate(['/dashboard']);
+          // TODO: Check against response.role and load different dashboard with player data
+          // TODO: otherwise load dm dashboard
+          this.router.navigate([`/dashboard/${response[0].role}`]);
         } else {
           // show error message D:
         }

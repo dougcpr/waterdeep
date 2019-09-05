@@ -17,6 +17,8 @@ import { CardDateDisplayComponent } from './components/card-date-display/card-da
 import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { CenterLayoutComponent } from './layouts/center-layout/center-layout.component';
+import { DmComponent } from './views/dashboard/dm/dm.component';
+import { PlayerComponent } from './views/dashboard/player/player.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CenterLayoutComponent } from './layouts/center-layout/center-layout.com
     DragDropEncounterComponent,
     LoginComponent,
     StoryboardComponent,
+    DmComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,
