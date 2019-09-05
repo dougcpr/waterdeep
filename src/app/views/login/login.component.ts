@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
           // TODO: otherwise load dm dashboard
           this.router.navigate([`/dashboard/${response[0].role}`]);
         } else {
+          console.log('Username Not Found');
           // show error message D:
         }
       });
