@@ -16,6 +16,6 @@ export class RegisterComponent implements OnInit {
     this.clicked = !this.clicked;
     setTimeout(() => {
       this.router.navigate(['/']);
-    }, 1000);
+    }, 500);
   }
 }

@@ -19,12 +19,14 @@ export class LoginComponent implements OnInit {
     this.username = $event.detail;
   }
   login() {
+    document.getElementById('login-button').innerHTML = '<dwc-loader></dwc-loader>';
     this._httpService.loginUser({username: this.username})
       .subscribe((response: User) => {
         if (response) {
           localStorage.setItem('auth', 'true');
           this.router.navigate([`/dashboard/${response[0].role}`]);
         } else {
+          document.getElementById('login-button').innerHTML = 'Login';
           console.log('Username Not Found');
           // show error message D:
         }
@@ -34,7 +36,7 @@ export class LoginComponent implements OnInit {
     this.clicked = !this.clicked;
     setTimeout(() => {
       this.router.navigate(['/register']);
-    }, 1000);
+    }, 500);
   }
 
 }

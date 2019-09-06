@@ -20,31 +20,49 @@
 
 dwc-card {
   dwc-input.slide-right {
-    animation: slide-right 1s forwards;
+    animation: slide-right 0.5s forwards;
   }
   dwc-button.slide-right {
-    animation: slide-right 1s forwards;
+    animation: slide-right 0.5s forwards;
   }
   div.slide-right {
-    animation: slide-right 1s forwards;
+    animation: slide-right 0.5s forwards;
   }
   dwc-input.slide-left {
     position: relative;
     left: 300px;
-    animation: slide-left 1s forwards;
+    animation: slide-left 0.5s forwards;
   }
   dwc-button.slide-left {
     position: relative;
     left: 300px;
-    animation: slide-left 1s forwards;
+    animation: slide-left 0.5s forwards;
   }
   div.slide-left {
     position: relative;
     left: 300px;
-    animation: slide-left 1s forwards;
+    animation: slide-left 0.5s forwards;
   }
   .fade {
     animation: fade 0.3s forwards;
+  }
+}
+
+@media (min-width: 425px) {
+  dwc-input.slide-left {
+    position: relative;
+    left: 425px;
+    animation: slide-left 1s forwards;
+  }
+  dwc-button.slide-left {
+    position: relative;
+    left: 425px;
+    animation: slide-left 1s forwards;
+  }
+  div.slide-left {
+    position: relative;
+    left: 425px;
+    animation: slide-left 1s forwards;
   }
 }
 
@@ -78,6 +96,23 @@ dwc-card {
     transform: translateX(0px);
   } to {
     transform: translateX(300px);
+  }
+}
+
+@media (min-width: 425px) {
+  @keyframes slide-right {
+    from {
+      transform: translateX(0px);
+    } to {
+        transform: translateX(425px);
+      }
+  }
+  @keyframes slide-left {
+    from {
+      transform: translateX(0px);
+    } to {
+        transform: translateX(-425px);
+      }
   }
 }
 
