@@ -2,6 +2,10 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "../node_modules/monomer/dist/monomer/monomer.css";
 
+html, body {
+  margin: 0 auto;
+}
+
 .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
   background-color: #0277BD;
 }
@@ -48,7 +52,7 @@ dwc-card {
   }
 }
 
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   dwc-input.slide-left {
     position: relative;
     left: 425px;
@@ -99,7 +103,7 @@ dwc-card {
   }
 }
 
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   @keyframes slide-right {
     from {
       transform: translateX(0px);

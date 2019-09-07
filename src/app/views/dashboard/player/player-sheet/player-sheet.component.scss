@@ -1,0 +1,63 @@
+.player-sheet {
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  .player-avatar {
+    img {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    padding: 0.25rem;
+  }
+  .player-container {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.25rem;
+    flex-grow: 2;
+    .player-name, .player-class, .player-health {
+      box-sizing: border-box;
+      background-color: #50bc91;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      color: white;
+      display: flex;
+      margin-bottom: 0.25rem;
+      p {
+        font-weight: 100;
+        line-height: 0.25rem;
+        margin-left: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (min-width: 325px) {
+  .player-sheet {
+    .player-avatar, .player-container {
+      .player-name, .player-class, .player-health {
+        p {
+          line-height: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.player-sheet.debug {
+  .player-container {
+    background-color: lightcoral;
+    .player-name, .player-health, .player-class {
+      background-color: #50bc91;
+      p {
+        color: white;
+      }
+    }
+  }
+  .player-avatar {
+    background-color: lightblue;
+  }
+}

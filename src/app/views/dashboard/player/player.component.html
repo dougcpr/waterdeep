@@ -1,10 +1,8 @@
-<p>
-  player works!
-</p>
-<button
-  (click)="logout()"
-  mat-mini-fab
-  class="exit-fab"
-  color="info">
-  <mat-icon class="fab-icon">exit_to_app</mat-icon>
-</button>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <mat-icon (click)="debug = !debug"> build</mat-icon>
+    <span class="spacer"></span>
+    <mat-icon (click)="logout()" aria-hidden="false" aria-label="Example user verified icon">exit_to_app</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<app-player-sheet [mode]=debug></app-player-sheet>

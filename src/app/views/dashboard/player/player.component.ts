@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-
+  debug = true;
   constructor(private router: Router) { }
 
   ngOnInit() {

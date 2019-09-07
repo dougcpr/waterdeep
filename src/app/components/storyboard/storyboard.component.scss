@@ -38,3 +38,9 @@ mat-expansion-panel {
   padding-top: 10px;
   height: 45px;
 }
+
+@media (max-width: 425px) {
+  .split-container {
+    flex-wrap: wrap;
+  }
+}

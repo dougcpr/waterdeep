@@ -20,6 +20,7 @@ import { CenterLayoutComponent } from './layouts/center-layout/center-layout.com
 import { DmComponent } from './views/dashboard/dm/dm.component';
 import { PlayerComponent } from './views/dashboard/player/player.component';
 import { RegisterComponent } from './views/register/register.component';
+import { PlayerSheetComponent } from './views/dashboard/player/player-sheet/player-sheet.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RegisterComponent } from './views/register/register.component';
     DmComponent,
     PlayerComponent,
     RegisterComponent,
+    PlayerSheetComponent,
   ],
   imports: [
     BrowserModule,
