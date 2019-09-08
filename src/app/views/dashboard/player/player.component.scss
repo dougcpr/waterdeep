@@ -1,20 +1,33 @@
 mat-toolbar {
-  background-color: white;
+  background-color: transparent;
   color: #50bc91;
 }
 .spacer {
   flex: 1 1 auto;
 }
 
-.player {
+.player-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-section, .temp-section {
   display: flex;
   flex-direction: column;
 }
 
 
 @media (min-width: 800px) {
-  .player {
+  .player-container {
     flex-direction: row;
+  }
+  .player-section {
+    flex-direction: column;
+    width: 50%;
+  }
+  .temp-section {
+    flex-direction: column;
+    width: 50%;
   }
   app-player-sheet, app-player-health {
     flex-grow: 1;

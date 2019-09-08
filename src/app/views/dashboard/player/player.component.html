@@ -5,7 +5,12 @@
     <mat-icon (click)="logout()" aria-hidden="false" aria-label="Example user verified icon">exit_to_app</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="player">
-  <app-player-sheet [user]="user[0]" [mode]=debug></app-player-sheet>
-  <app-player-health [mode]="debug"></app-player-health>
+<div class="player-container">
+  <div class="player-section">
+    <app-player-sheet [user]="user[0]" [mode]=debug></app-player-sheet>
+    <app-player-health [mode]="debug"></app-player-health>
+  </div>
+  <div class="temp-section">
+  <!-- TODO: FILL OUT?-->
+  </div>
 </div>

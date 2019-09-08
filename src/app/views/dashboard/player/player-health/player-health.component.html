@@ -1,20 +1,21 @@
 <div [ngClass]="mode ? 'debug' : ''" class="player-health-container">
   <div class="player-ac">
-    <img src="../../../../../assets/icons/shield.png" alt="">
+    <img src="../../../../../assets/icons/shield-blank.png" alt="">
     <span class="ac">15</span>
   </div>
   <div class="player-health">
-    <div class="health">
+    <div class="health info-card">
       <span class="small-font">HP</span>
       <span>15</span>
     </div>
-    <div class="max-health">
+    <div class="max-health info-card">
       <span class="small-font">Max Health</span>15
     </div>
   </div>
   <div class="player-hit-die">
-    <span class="hex">&#x2B22;</span>
-    <span class="hit-die-title small-font">Hit Die</span>
-    <span class="hit-die-roll">1d8</span>
+    <div class="hit-roll-die-container info-card">
+      <span class="hit-die-title small-font">Hit Die</span>
+      <span class="hit-die-roll">1d8</span>
+    </div>
   </div>
 </div>

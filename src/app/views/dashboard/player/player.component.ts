@@ -17,8 +17,6 @@ export class PlayerComponent implements OnInit {
     this.user = this.store.get();
   }
   logout() {
-    localStorage.removeItem('auth');
-    localStorage.removeItem('store');
-    this.router.navigate(['/']);
+    this.store.logout();
   }
 }

@@ -4,7 +4,6 @@
   padding: 10px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   vertical-align: top;
 }
 
@@ -133,4 +132,10 @@
   z-index: 3;
   position: relative;
   top: -27px;
+}
+
+@media (max-width: 800px){
+  .example-container {
+    flex-wrap: wrap;
+  }
 }

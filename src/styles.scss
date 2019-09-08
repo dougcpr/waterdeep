@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "../node_modules/monomer/dist/monomer/monomer.css";
+@import "assets/variables";
 
 html, body {
   margin: 0 auto;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
@@ -12,6 +15,11 @@ html, body {
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
   background-color: #0277BD;
+}
+
+.info-card {
+  border-left: 3px solid;
+  border-color:$color-font-default;
 }
 
 .class-icon {

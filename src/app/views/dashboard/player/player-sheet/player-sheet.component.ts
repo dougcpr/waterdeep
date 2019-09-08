@@ -16,7 +16,7 @@ export class PlayerSheetComponent implements OnInit {
     await this.calculateImagePath();
   }
   calculateImagePath() {
-    this.imagePath = `../../../../../assets/icons/${this.user.class}-player.png`;
+    this.imagePath = `../../../../../assets/icons/${this.user.class}.png`;
   }
 
 }

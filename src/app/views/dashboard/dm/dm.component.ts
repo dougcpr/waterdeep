@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from '../../../models/player.model';
 import { Router } from '@angular/router';
 import { HttpService } from '../../../services/http.service';
+import { StoreService } from '../../../services/store.service';
 
 @Component({
   selector: 'app-dm',
@@ -15,7 +16,7 @@ export class DmComponent implements OnInit {
   showRoster = false;
   constructor(
     private http: HttpService,
-    private router: Router
+    private store: StoreService
   ) {}
 
   ngOnInit() {
@@ -50,8 +51,7 @@ export class DmComponent implements OnInit {
       });
   }
   logout() {
-    localStorage.removeItem('auth');
-    this.router.navigate(['/']);
+    this.store.logout();
   }
 
 }
