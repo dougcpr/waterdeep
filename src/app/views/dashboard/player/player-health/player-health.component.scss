@@ -1,0 +1,87 @@
+@import "../../../../../assets/variables";
+.player-health-container {
+  display: flex;
+  font-weight: $font-weight-default;
+  justify-content: space-between;
+  margin: 1rem;
+  .player-ac {
+    padding: 0.25rem;
+    .ac {
+      color: $color-font-default;
+      font-size: 1.25rem;
+      position: relative;
+      bottom: 1.75rem;
+      right: 2.75rem;
+    }
+  }
+  .player-ac, .player-health, .player-hit-die {
+    width: 30%;
+  }
+  .player-health {
+    padding: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .health, .max-health {
+      box-shadow: $box-shadow-default;
+      background-color: $color-base;
+      color: $color-font-default;
+      margin: 0.25rem;
+    }
+    .health {
+      padding: 0.25rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 2;
+    }
+    .max-health {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-grow: 1;
+      .small-font {
+        position: relative;
+        top: 0.20rem;
+      }
+    }
+  }
+  .small-font {
+    font-size: 0.5rem;
+  }
+  .player-hit-die {
+    text-shadow: $box-shadow-default;
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    text-align: center;
+    .hex {
+      display: flex;
+      justify-content: flex-end;
+      bottom: 1.25rem;
+      color: $color-base;
+      font-size: 4.5rem;
+      position: relative;
+    }
+    .hit-die-roll, .hit-die-title {
+      text-shadow: none;
+      color: $color-font-default;
+      position: relative;
+      left: 1.25rem;
+      bottom: 5.5rem;
+    }
+  }
+}
+
+.player-health-container.debug {
+  background-color: $color-debug-layer-1;
+  .player-ac, .player-health, .player-hit-die {
+    background-color: $color-debug-layer-2;
+    .health, .max-health {
+      background-color: $color-debug-layer-3;
+    }
+  }
+  .player-hit-die .hex {
+    color: $color-debug-layer-3;
+  }
+}

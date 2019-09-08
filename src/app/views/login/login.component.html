@@ -1,4 +1,4 @@
-<app-center-layout>
+<app-center-layout (keyup)="detectEnterKey($event)">
   <dwc-card>
     <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" (valueChange)="updateText($event)" label="Username"></dwc-input>
     <dwc-input [ngClass]="clicked ? 'slide-right' : 'slide-left'" class="fade" disabled label="Password"></dwc-input>

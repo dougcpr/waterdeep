@@ -1,5 +1,6 @@
 TODO:
 # feature
+- made variables for styles
 - allow user to register their name, then navigate to dashboard to upload pdf of character
 - parse character profile with pdf parse
 - make player default profile page 
