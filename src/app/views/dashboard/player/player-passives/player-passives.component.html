@@ -1,0 +1,26 @@
+<div [ngClass]="mode ? 'debug' : ''" class="player-passives-container">
+  <div class="perception">
+    <div class="center-content">
+      <div class="passive-font">Passive Perception</div>
+      <div class="passive-number">{{user.passive.perception}}</div>
+    </div>
+  </div>
+  <div class="initiative">
+    <div class="center-content">
+      <div class="passive-font">Initiative</div>
+      <div class="passive-number">{{user.passive.initiative}}</div>
+    </div>
+  </div>
+  <div class="proficiency">
+    <div class="center-content">
+      <div class="passive-font">Proficiency</div>
+      <div class="passive-number">{{user.passive.proficiency}}</div>
+    </div>
+  </div>
+  <div class="wisdom">
+    <div class="center-content">
+      <div class="passive-font">Passive Wisdom</div>
+      <div class="passive-number">{{user.passive.wisdom}}</div>
+    </div>
+  </div>
+</div>

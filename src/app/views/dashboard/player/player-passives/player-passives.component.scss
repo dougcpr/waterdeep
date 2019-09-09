@@ -1,0 +1,30 @@
+@import "../../../../../assets/variables";
+.player-passives-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: $font-weight-default;
+  margin: 1rem;
+  .perception, .initiative, .proficiency, .wisdom {
+    border-left: 3px solid $color-font-default;
+    box-shadow: $box-shadow-default;
+    color: $color-font-default;
+    background-color: white;
+    width: 20%;
+    text-align: center;
+    .passive-font {
+      text-align: center;
+      font-size: 0.5rem;
+    }
+    .passive-number {
+      text-align: center;
+    }
+  }
+}
+
+.player-passives-container.debug {
+  background-color: $color-debug-layer-1;
+  .perception, .initiative, .proficiency, .wisdom {
+    background-color: $color-debug-layer-3;
+  }
+}

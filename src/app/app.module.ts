@@ -22,6 +22,7 @@ import { PlayerComponent } from './views/dashboard/player/player.component';
 import { RegisterComponent } from './views/register/register.component';
 import { PlayerSheetComponent } from './views/dashboard/player/player-sheet/player-sheet.component';
 import { PlayerHealthComponent } from './views/dashboard/player/player-health/player-health.component';
+import { PlayerPassivesComponent } from './views/dashboard/player/player-passives/player-passives.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PlayerHealthComponent } from './views/dashboard/player/player-health/pl
     PlayerComponent,
     RegisterComponent,
     PlayerSheetComponent,
-    PlayerHealthComponent
+    PlayerHealthComponent,
+    PlayerPassivesComponent
   ],
   imports: [
     BrowserModule,
