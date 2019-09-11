@@ -1,15 +1,13 @@
 TODO:
 # feature
-- made variables for styles
+- make player default profile page 
 - allow user to register their name, then navigate to dashboard to upload pdf of character
 - parse character profile with pdf parse
-- make player default profile page 
-- implement ngrx/store
-- create `dwc-dropdown` component
-- deploy server and client
+- make historical combat log
 
 # small feature
 - make combat damage integer instead of increment/decrement
+- heal and dmg icon, remove perception from combat log
 -- map negative combat damage to script
 - state management for players health
 
