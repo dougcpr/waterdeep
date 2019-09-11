@@ -2,7 +2,6 @@ const express = require ('express');
 let bodyParser = require('body-parser');
 const MongoClient = require ('mongodb').MongoClient;
 let db;
-let query = [];
 
 const app = express();
 // parse application/x-www-form-urlencoded
