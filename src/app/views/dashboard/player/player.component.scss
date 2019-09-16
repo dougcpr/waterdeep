@@ -1,7 +1,7 @@
 @import "../../../../assets/variables";
 mat-toolbar {
   background-color: transparent;
-  color: #50bc91;
+  color: $color-font-default;
 }
 .spacer {
   flex: 1 1 auto;
@@ -17,7 +17,6 @@ mat-toolbar {
   flex-direction: column;
 }
 
-
 @media (min-width: 800px) {
   .player-container {
     flex-direction: row;
@@ -29,9 +28,6 @@ mat-toolbar {
   .temp-section {
     flex-direction: column;
     width: 50%;
-  }
-  app-player-sheet, app-player-health {
-    flex-grow: 1;
   }
   app-player-health {
     transform: translateY(10px);

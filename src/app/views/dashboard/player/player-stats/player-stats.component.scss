@@ -1,0 +1,45 @@
+@import "../../../../../assets/variables";
+.stat-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  .abilities-column {
+    color: $color-font-default;
+    border-left: 0.25rem solid $border-color;
+    background-color: $color-base;
+    box-shadow: $box-shadow-default;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 20%;
+    .stat {
+      display: flex;
+      flex-direction: row;
+      height: 1.5rem;
+      justify-content: space-between;
+      .stat-value, .state-modifier, .stat-ability {
+        height: max-content;
+        padding: 0.3rem;
+        .stat-number {
+          font-family: monospace;
+        }
+      }
+    }
+  }
+}
+
+.stat-container.debug {
+  background-color: $color-debug-layer-1;
+  .abilities-column {
+    background-color: $color-debug-layer-2;
+    .stat {
+      .stat-value, .stat-modifier, .stat-ability {
+        background-color: $color-debug-layer-3;
+      }
+    }
+  }
+}

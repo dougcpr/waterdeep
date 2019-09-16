@@ -7,3 +7,11 @@ export interface Player {
   active: boolean;
   class: string;
 }
+
+export enum Abilities {
+  strength = 'STR',
+  dexterity = 'DEX',
+  intelligence = 'INT',
+  wisdom = 'WIS',
+  charisma = 'CHA'
+}

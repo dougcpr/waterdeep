@@ -9,6 +9,13 @@ html, body {
   height: 100vh;
 }
 
+.pl-1 {
+  padding-left: 1rem;
+}
+.pr-1 {
+  padding-right: 1rem;
+}
+
 .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
   background-color: #0277BD;
 }
@@ -19,7 +26,7 @@ html, body {
 
 .info-card {
   border-left: 3px solid;
-  border-color:$color-font-default;
+  border-color: $border-color;
 }
 
 .center-content {

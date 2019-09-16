@@ -6,7 +6,7 @@
   font-weight: $font-weight-default;
   margin: 1rem;
   .perception, .initiative, .proficiency, .wisdom {
-    border-left: 3px solid $color-font-default;
+    border-left: 0.25rem solid $border-color;
     box-shadow: $box-shadow-default;
     color: $color-font-default;
     background-color: white;
@@ -19,6 +19,12 @@
     .passive-number {
       text-align: center;
     }
+  }
+}
+
+@media (min-width: 800px) {
+  .player-passives-container {
+    margin: 0 1rem 1rem 1rem;
   }
 }
 

@@ -3,7 +3,7 @@
   display: flex;
   font-weight: $font-weight-default;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 0 1rem;
   .player-ac {
     padding: 0.25rem;
     height: 4rem;
@@ -47,6 +47,9 @@
   }
   .small-font {
     font-size: 0.5rem;
+  }
+  .health-number {
+    padding-right: 0.25rem;
   }
   .player-hit-die {
     text-align: center;

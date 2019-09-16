@@ -1,0 +1,12 @@
+<div [ngClass]="mode ? 'debug' : ''" class="stat-container">
+  <div class="abilities-column" *ngFor="let stat of stats">
+      <div class="stat">
+        <div class="stat-ability">{{abilities[stat.ability]}}</div>
+        <div class="stat-value">{{stat.value}}</div>
+      </div>
+      <div class="stat-modifier">
+        <span *ngIf="(stat.value - 10)/2 > 0">+</span>
+        <span class="stat-number">{{(stat.value - 10)/2}}</span>
+      </div>
+    </div>
+</div>

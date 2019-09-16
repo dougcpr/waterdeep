@@ -9,7 +9,7 @@ import { User } from '../../../models/user.model';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-  debug = true;
+  debug = false;
   user;
   constructor(private router: Router, private store: StoreService) { }
 
