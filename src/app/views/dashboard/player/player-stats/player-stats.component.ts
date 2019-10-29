@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Abilities } from '../../../../models/player.model';
+import { User } from '../../../../models/user.model';
 
 @Component({
   selector: 'app-player-stats',
@@ -8,13 +9,7 @@ import { Abilities } from '../../../../models/player.model';
 })
 export class PlayerStatsComponent implements OnInit {
   @Input() mode;
-  stats = [
-    {ability: 'strength', value: 12},
-    {ability: 'dexterity', value: 8},
-    {ability: 'intelligence', value: 16},
-    {ability: 'wisdom', value: 14},
-    {ability: 'charisma', value: 14}]
-  ;
+  @Input() user: User;
   abilities = Abilities;
   constructor() { }
 

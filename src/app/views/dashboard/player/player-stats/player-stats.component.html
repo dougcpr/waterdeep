@@ -1,12 +1,14 @@
 <div [ngClass]="mode ? 'debug' : ''" class="stat-container">
-  <div class="abilities-column" *ngFor="let stat of stats">
+  <div class="abilities-column" *ngFor="let stat of user.stats">
       <div class="stat">
         <div class="stat-ability">{{abilities[stat.ability]}}</div>
         <div class="stat-value">{{stat.value}}</div>
       </div>
-      <div class="stat-modifier">
+      <div class="stat-modifier" [ngStyle]="{color: stat.proficient ? '#FFD180' : ''}">
         <span *ngIf="(stat.value - 10)/2 > 0">+</span>
-        <span class="stat-number">{{(stat.value - 10)/2}}</span>
+        <!-- if proficient add to the value-->
+        <span class="stat-number" *ngIf="stat.proficient else nonProficient">{{(stat.value - 10)/2 + user.proficiency}}</span>
+        <ng-template class="stat-number" #nonProficient>{{(stat.value - 10)/2}}</ng-template>
       </div>
     </div>
 </div>

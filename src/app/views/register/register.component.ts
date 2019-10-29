@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  model = {
+    username: '',
+    password: ''
+  };
   clicked = false;
   constructor(private router: Router) { }
 
@@ -17,5 +21,11 @@ export class RegisterComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(['/']);
     }, 500);
+  }
+  updateText(event, key) {
+    this.model[key] = event.detail;
+  }
+  registerUser() {
+    console.log(this.model);
   }
 }

@@ -10,9 +10,9 @@
     <app-player-sheet [user]="user[0]" [mode]=debug></app-player-sheet>
     <app-player-health [mode]="debug"></app-player-health>
   </div>
-  <div class="temp-section">
+  <div class="player-passives">
     <app-player-passives [user]="user[0]" [mode]="debug"></app-player-passives>
     <app-separator></app-separator>
-    <app-player-stats [mode]="debug"></app-player-stats>
+    <app-player-stats [user]="user[0]" [mode]="debug"></app-player-stats>
   </div>
 </div>

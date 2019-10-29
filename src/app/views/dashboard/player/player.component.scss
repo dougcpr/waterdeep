@@ -1,4 +1,7 @@
 @import "../../../../assets/variables";
+mat-icon {
+  width: auto;
+}
 mat-toolbar {
   background-color: transparent;
   color: $color-font-default;
@@ -12,7 +15,7 @@ mat-toolbar {
   flex-direction: column;
 }
 
-.player-section, .temp-section {
+.player-section, .player-passives {
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +28,7 @@ mat-toolbar {
     flex-direction: column;
     width: 50%;
   }
-  .temp-section {
+  .player-passives {
     flex-direction: column;
     width: 50%;
   }

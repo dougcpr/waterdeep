@@ -45,4 +45,7 @@ export class HttpService {
   updatePlayer(body): Observable<any> {
     return this.http.post(`${this.route}/updatePlayer`, body);
   }
+  registerPlayer(body): Observable<any> {
+    return this.http.post(`${this.route}/register`, body);
+  }
 }
